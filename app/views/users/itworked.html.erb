@@ -1,0 +1,8 @@
+<h1>it worked look here</h1>
+<% if @images %>
+	<% @images.each do |image| %>
+	<img width="300" class="img-thumbnail" src="<%= image %>">
+	<% end %>
+	
+<% end %>
+	
