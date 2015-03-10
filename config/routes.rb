@@ -3,8 +3,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   # You can have the root of your site routed with "root"
 
-  root 'users#index'
+  #this is the real one
+  # root 'users#index'
 
+  #use this one for heroku testing
+  root 'welcome#index'
 
   # Example of regular route:
   get 'instagram' => 'instagrams#index'
