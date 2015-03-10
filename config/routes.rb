@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
 
   #this is the real one
-  # root 'users#index'
+  root 'users#index'
 
   #use this one for heroku testing
-  root 'welcome#index'
+  # root 'welcome#index'
 
   # Example of regular route:
   get 'instagram' => 'instagrams#index'
