@@ -27,7 +27,7 @@ class InstagramsController < ApplicationController
       p media.images
       @images.push(media.images.standard_resolution.url)
     end
-    render file: '/app/views/users/itworked'
+    render file: '/app/views/users/itworked', layout: false
   end
 
 
