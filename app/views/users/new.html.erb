@@ -1,24 +1,22 @@
 <div class="col-md-10 col-md-offset-1" id="element1"></div>
   <div class="col-md-6 col-md-offset-3"id="content1"></div>
   <div class="col-md-4 col-md-offset-4" id="signup">
-    <img src="http://res.cloudinary.com/dzxyyevk0/image/upload/v1425951472/fufczbyw80oe7otqflhk.png" id="hanger">
-    <h2>Sign up now and start rating<h2>
-    <form action="/users" method="post"  id="registernew">
+    <img src=<%= asset_path('ENSEMBLE-logo-white.png') %> id="logo">
+    <h1>Sign up now and start rating</h1>
+    <form action="/users" method="post"  id="register">
       <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden"/>
       Username:<br>
-      <input type="text" name="user[username]" placeholder="username">
+      <input type="text" name="user[username]" placeholder="">
       <br>
       Email:<br>
-      <input type="text" name="user[email]" placeholder="email">
+      <input type="text" name="user[email]" placeholder="">
       <br>
       Password:<br>
-      <input type="password" name="user[password]" placeholder="password">
+      <input type="password" name="user[password]" placeholder="">
       <br>
       Confirm Password:<br>
-      <input type="password" name="user[confirm_password]" placeholder="confirm password">
+      <input type="password" name="user[confirm_password]" placeholder="">
       <br><br>
-      <div class="instagram">
-      <button type="submit" value="Submit"class="btn btn-1 btn-1a newbuttons">SUBMIT</button></form>
-      <br>
-      <button class="btn btn-1 btn-1a newbuttons"<a href="/instagram/oauth/connect" id="withinstagram">Login With Instagram<i class="fa fa-instagram"></i></a></button>
-    </div>
+      <div class="instagramnew">
+      <button type="submit" value="Submit"class="btn btn-1 btn-1a newbuttons">SUBMIT</button></form><button class="btn btn-1 btn-1a newbuttons"<a href="/instagram/oauth/connect">Login With Instagram<i class="fa fa-instagram"></i></a></button></div>
+      <div class="registernow" id="signinmessage">Already a member?<a href="/">Sign In</a></div>
