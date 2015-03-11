@@ -1,6 +1,5 @@
 class InstagramsController < ApplicationController
 
-  before_filter :authorize
 
   CALLBACK_URL = "https://floating-retreat-7259.herokuapp.com/instagram/oauth/callback"
 
@@ -37,6 +36,7 @@ private
   def create_or_login(response)
    user = User.where(username: response.user.username).first_or_create do |newuser|
         newuser.username = response.user.username
+        newuser.password = response.access_token
         newuser.avatar = response.user.profile_picture
         newuser.auth_token = response.access_token
         newuser.instagram_name = response.user.full_name
