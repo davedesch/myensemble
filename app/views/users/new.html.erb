@@ -18,6 +18,9 @@
         <button type="submit" value="Submit"class="btn btn-1 btn-1a newbuttons">SUBMIT</button></form> -->
 
         <%= form_for :user, url: '/users', id: "register" do |f| %>
+        <% flash.each do |name, msg| %>
+  <%= msg %>
+<% end %><br>
         Name:<br><%= f.text_field :username %><br>
         Email:<br><%= f.text_field :email %><br>
         Password:<br><%= f.password_field :password %><br>

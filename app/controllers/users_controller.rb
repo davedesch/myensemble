@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to user_path(user.id)
     else
-      redirect_to '/register'
+      redirect_to '/register', :notice => "Sorry, your credentials were invalid. Please try again"
     end
   end
 
