@@ -1,9 +1,9 @@
 #element1 {
   position: relative;
   z-index: 1;
-  top: 125px;
+  top: 65px;
   background-image: url(closet.jpg);
-  height: 575px;
+  height: 630px;
   color: blue;
   background-color: blue;
   opacity: 0.4;
@@ -15,9 +15,9 @@
 #content1 {
   position: relative;
   z-index: 2;
-  top: -375px;
+  top: -500px;
   background-color: black;
-  height: 450px;
+  height: 520px;
   opacity: 0.65;
 }
 
@@ -25,7 +25,7 @@
   overflow: hidden;
   position: relative;
   z-index: 3;
-  top: -820px;
+  top: -1030px;
   text-align: center;
   height: 530px;
   color: white;
@@ -43,20 +43,55 @@
 
 #logo {
  height: 120px;
- margin-bottom: 0px;
-}
-
-#register {
-  font-size: .6em;
-  margin-top: 1%;
+ margin-bottom: -35px;
 }
 
 .instagram button{
   margin-top: 5px;
   font-family: 'Lato', sans-serif;
-  /*color: rgb(111, 171, 251);*/
-  /*color: rgb(86, 214, 249);*/
+  font-size: 1em;
   color: #56D6F9;
   border: 3px solid #56D6F9;
 }
 
+.registernow a{
+  padding-left: 10px;
+  font-family: 'Lato', sans-serif;
+  color: rgb(86, 214, 249);
+}
+
+.registernow a:hover {
+  text-decoration: underline;
+}
+
+#register {
+  margin-top: -15px;
+}
+
+
+#register input{
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.instagramnew button{
+  margin-top: 5px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  color: #56D6F9;
+  border: 3px solid #56D6F9;
+}
+
+.instagramnew {
+  margin-top: -15px;
+}
+
+.registernow {
+  font-size: 1.5em;
+}
+
+#logoindex {
+  height: 200px;
+  margin-bottom: -35px;
+
+}
