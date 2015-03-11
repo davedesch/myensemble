@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+
+  has_secure_password
+
   has_many :outfits
   has_many :ratings
   has_many :user_favorites
@@ -9,6 +12,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true, unless: :auth_token, presence: true
   validates :email, uniqueness: true
   validates_format_of :email, :with => /\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}/ , if: :email, presence: true
+  # validates :password, presence: true
 
   # def to_param
   #   username
