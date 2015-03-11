@@ -216,7 +216,7 @@ function newOutfit() {
     .done(function(response) {
       $('#instagram_select').html(response);
        $('.img-thumbnail').on('click', function(event) {
-    var imgURL = this.src
+    var imgURL = this.src.replace(/^http:/, 'https:');
     selectInstagramImage(imgURL);
   });
     });
