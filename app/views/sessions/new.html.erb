@@ -1,0 +1,32 @@
+  <div class="col-md-10 col-md-offset-1" id="element1"></div>
+  <div class="col-md-6 col-md-offset-3"id="content1"></div>
+  <div class="col-md-4 col-md-offset-4" id="signup">
+    <img src=<%= asset_path('ENSEMBLE-logo-white.png') %> id="logoindex">
+    <div class="instagram">
+    <a href="/instagram/oauth/connect"><button class="btn btn-1 btn-1a">Login With Instagram <i class="fa fa-instagram"></i></button></a>
+    <h1>Let's get you signed in</h1>
+        <%= form_tag '/login', id: "register" do %>
+
+    Email:<br>
+    <%= text_field_tag :email %>
+    <br>
+    Password:<br>
+    <%= password_field_tag :password %><br><br>
+    <div class="instagram">
+    <%= submit_tag "Sign In", class: "btn btn-1 btn-1a newbuttons" %>
+
+    <% end %>
+<!--     <form action="/login" method="post" id="register">
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden"/>
+      Username:<br>
+      <input type="text" name="username" placeholder="">
+      <br>
+      Password:<br>
+      <input type="password" name="password" placeholder="">
+      <br><br>
+      <div class="instagram">
+      <button type="submit" value="Submit" class="btn btn-1 btn-1a">SUBMIT</button>
+    </form> -->
+    </div>
+    <div class="registernow">Not a Member Yet?<a href="/users/new">Register</a></div>
+    </div>

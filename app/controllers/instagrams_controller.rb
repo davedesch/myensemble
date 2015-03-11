@@ -1,5 +1,7 @@
 class InstagramsController < ApplicationController
 
+  before_filter :authorize
+
   CALLBACK_URL = "https://floating-retreat-7259.herokuapp.com/instagram/oauth/callback"
 
   CLIENT = ENV['CLIENT_ID']

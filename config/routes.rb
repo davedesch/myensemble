@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   # You can have the root of your site routed with "root"
 
   #this is the real one
   root 'users#index'
+
+  #FIXED REGISTER ROUTES
+  get '/register' => 'users#new'
+  post '/users' => 'users#create'
 
   #use this one for heroku testing
   # root 'welcome#index'
@@ -30,8 +38,6 @@ Rails.application.routes.draw do
   #     end
   #   end
 
-  post '/login', to: 'users#login', as: 'login'
-  get '/logout', to: 'users#logout', as: 'logout'
 
 
   get '/ensembles' => 'users#ensembles'
