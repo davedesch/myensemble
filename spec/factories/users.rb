@@ -5,7 +5,7 @@ FactoryGirl.define do
   factory :user do
   	username { Faker::Internet.user_name }
     email { Faker::Internet.email }
-    password_hash { Faker::Internet.password(6, 8) }
+    password_digest { Faker::Internet.password(6, 8) }
     avatar { Faker::Avatar.image }
   end
 end

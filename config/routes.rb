@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   #this is the real one
   root 'users#index'
 
+  #FIXED REGISTER ROUTES
+  get '/register' => 'users#new'
+  post '/users' => 'users#create'
+
   #use this one for heroku testing
   # root 'welcome#index'
 
@@ -30,8 +34,6 @@ Rails.application.routes.draw do
   #     end
   #   end
 
-  post '/login', to: 'users#login', as: 'login'
-  get '/logout', to: 'users#logout', as: 'logout'
 
 
   get '/ensembles' => 'users#ensembles'
