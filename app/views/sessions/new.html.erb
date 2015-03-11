@@ -6,7 +6,9 @@
     <a href="/instagram/oauth/connect"><button class="btn btn-1 btn-1a">Login With Instagram <i class="fa fa-instagram"></i></button></a>
     <h1>Let's get you signed in</h1>
         <%= form_tag '/login', id: "register" do %>
-
+        <% flash.each do |name, msg| %>
+  <%= msg %>
+<% end %><br>
     Email:<br>
     <%= text_field_tag :email %>
     <br>
