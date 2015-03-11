@@ -1,5 +1,7 @@
 class HashtagsController < ApplicationController
 
+  before_filter :authorize
+
   def index
     # render json list of top trending hashtags (i.e. most popular hashtags)
     hashtags = Hashtag.select("hashtags.*, COUNT(outfit_tags.id) tag_count").joins(:outfit_tags).group("hashtags.id").order("tag_count DESC").limit(10)

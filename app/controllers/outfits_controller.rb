@@ -1,5 +1,7 @@
 class OutfitsController < ApplicationController
 
+  before_filter :authorize
+
   def index
     user = User.find(params[:user_id])
     p user

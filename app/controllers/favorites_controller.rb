@@ -1,5 +1,7 @@
 class FavoritesController < ApplicationController
 
+  before_filter :authorize
+
   def hashtags
     # this is just a list of the users favorite hashtags for the drop down
     user = User.find(session[:user_id])

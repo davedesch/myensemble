@@ -1,5 +1,7 @@
 class RatingsController < ApplicationController
 
+  before_filter :authorize
+
   def new
     # form is hidden in front end
   end
