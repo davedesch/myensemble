@@ -4,18 +4,20 @@
     <img src=<%= asset_path('ENSEMBLE-logo-white.png') %> id="logoindex">
     <div class="instagram">
     <a href="/instagram/oauth/connect"><button class="btn btn-1 btn-1a">Login With Instagram <i class="fa fa-instagram"></i></button></a>
-    <h1>Let's get you signed in</h1>
+    <h1 id="hello">Let's get you signed in</h1>
         <%= form_tag '/login', id: "register" do %>
-        <% flash.each do |name, msg| %>
-  <%= msg %>
-<% end %><br>
+
     Email:<br>
     <%= text_field_tag :email %>
     <br>
     Password:<br>
-    <%= password_field_tag :password %><br><br>
+    <%= password_field_tag :password %><br>
+            <% flash.each do |name, msg| %>
+<%= msg %>
+<% end %>
+    <br><br>
     <div class="instagram">
-    <%= submit_tag "Sign In", class: "btn btn-1 btn-1a newbuttons" %>
+    <%= submit_tag "Sign In", class: "btn btn-1 btn-1a newbuttons", id: "signinbutton" %>
 
     <% end %>
 <!--     <form action="/login" method="post" id="register">
