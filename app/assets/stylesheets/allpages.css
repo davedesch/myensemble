@@ -2,46 +2,44 @@ body {
   background-image: url("norwegian_rose.png");
 }
 
-body {
+/*body {*/
 /*  background-image: url("http://favim.com/orig/201108/04/bedroom-closet-clothes-fashion-walk-in-closet-Favim.com-120026.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: .85;*/
-}
+/*}*/
 
-#title {
+/*#title {*/
 /*  margin-left: 30%;
   margin-top: 30%;
   font-family: 'Lobster', cursive;
   font-size: 75pt;*/
-  color: black;
+/*  color: black;
 }
 
-#sign_in {
-  /*margin-left: 50%;*/
-}
+*/
 
-.container {
+/*.container {
   width: 100%;
-}
+}*/
 
-#searchbar {
-  text-align: center;
+/*#searchbar {
+  text-align: center;*/
   /*margin: auto;*/
   /*border: solid;*/
-}
+/*}*/
 
-.dashboard {
-  text-align: center;
+/*.dashboard {
+  text-align: center;*/
   /*border: dashed;*/
 
-}
+/*}
 
 #outfitpicture {
   margin: auto;
 }
 
-
+*/
 
 
 
@@ -76,7 +74,7 @@ body {
 }
 */
 
-.rating-form {
+/*.rating-form {
   display: none;
 }
 
@@ -88,3 +86,4 @@ body {
 .outfitform {
   margin-top: 1px;
 }
+*/

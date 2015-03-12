@@ -25,12 +25,13 @@
   overflow: hidden;
   position: relative;
   z-index: 3;
-  top: -1030px;
+  top: -1035px;
   text-align: center;
-  height: 530px;
+  height: 550px;
   color: white;
   font-family: 'Raleway', sans-serif;
 }
+
 
 #login {
   position: relative;
@@ -54,6 +55,7 @@
   border: 3px solid #56D6F9;
 }
 
+
 /*.instagram input {
   color: #56D6F9;
   border: 3px solid #56D6F9;
@@ -70,13 +72,22 @@
 }
 
 #register {
-  margin-top: -15px;
+  margin-top: -30px;
+}
+
+.registerbox form{
+  text-align: center;
+}
+
+.registerbox input {
+
 }
 
 
 #register input{
   font-size: 1em;
   margin-bottom: 5px;
+  /*color: black;*/
 }
 
 .instagramnew button{
@@ -88,7 +99,7 @@
 }
 
 .instagramnew {
-  margin-top: -15px;
+  margin-top: 50px;
 }
 
 .registernow {
@@ -112,4 +123,69 @@
 #sidelogo {
   height: 100px;
   float: right;
+}
+
+#signinbutton {
+  /*color: #56D6F9;*/
+}
+
+#email {
+  color: black;
+}
+
+#password {
+  color: black;
+}
+
+#user_username {
+color: black;
+  margin-top: 5px;
+
+}
+
+#user_email {
+color: black;
+  margin-top: 5px;
+    vertical-align: bottom;
+
+}
+
+#user_password {
+color: black;
+  margin-top: 5px;
+    vertical-align: bottom;
+
+}
+
+#user_password_confirmation {
+  color: black;
+  margin-top: 5px;
+    vertical-align: bottom;
+}
+
+#registerheader {
+  font-size: 1.2em;
+  margin-top: 30px;
+
+}
+
+table {
+  text-align: left;
+  margin: auto;
+
+}
+
+td {
+  padding-left: 10px;
+}
+
+#msg {
+  margin-top: 25px;
+  margin-bottom: -30px;
+}
+
+
+#hello {
+  font-size: 1.2em;
+  margin-bottom: 40px;
 }
