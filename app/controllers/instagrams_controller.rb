@@ -1,7 +1,8 @@
 class InstagramsController < ApplicationController
 
 
-  CALLBACK_URL = "https://floating-retreat-7259/instagram/oauth/callback"
+  CALLBACK_URL = "https://floating-retreat-7259.herokuapp.com/instagram/oauth/callback"
+  
 
   CLIENT = ENV['CLIENT_ID']
 
