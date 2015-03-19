@@ -1,16 +1,19 @@
 <h1>Add an outfit.</h1>
 <img src="">
 <div id="upload_widget_opener">
-<button class="btn btn-1 btn-1a">OPEN SOME FUCKING PICTURES</button>
+<button class="btn btn-1 btn-1a">Upload an Image</button>
 </div>
+<% if @current_user.auth_token %>
 <div id="upload_with_instagram"><a id='get_from_instagram' href="/instagram/recent"><button class="btn btn-1 btn-1a" >Select from Instagram<i class="fa fa-instagram"></i></button></a></div>
 <div id="instagram_select" title="choose a picture from instagram"></div>
+<% end %>
+
 <div id="newoutfitthumbnail"></div>
 <br>
-<%= form_for :outfit, as: :post, html: { class: "outfitform"}, url: user_outfits_path do |f| %>
+<%= form_for @outfit, as: :outfit, html: { class: "outfitform"}, url: user_outfits_path do |f| %>
 <p>
   <%= f.label :title %><br>
-  <%= f.text_field :title %>
+  <%= f.text_field  :title %>
 </p>
 
 <p>
@@ -26,6 +29,9 @@
   <% genders = ["Ladies", "Gentlemen", "Doesn't Matter (Unisex)"] %>
   <%= f.select :gender, options_for_select(genders) %>
 </p>
+
+<p><%= link_to_add_fields "Add a new Article", f, :articles %></p>
+
 
 <p>
   <%= f.submit 'create your outfit', :class => "btn btn-1 btn-1a", :id => 'newoutfit'%>

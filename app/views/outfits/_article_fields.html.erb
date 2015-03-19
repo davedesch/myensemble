@@ -1,0 +1,14 @@
+<p>
+  <%= f.collection_select :article_type_id, ArticleType.order(:type_desc), :id ,:type_desc, include_blank: "Type of Article" %><br>
+  <%= f.label :brand, "Brand" %>
+  <%= f.text_field :brand %><br>
+  <%= f.label :url, "Paste a link to the item" %>
+  <%= f.url_field :url %><br>
+  <%= f.label :discontinued, "Discontinuted" %>
+  <%= f.check_box :discontinued %>
+  <%= f.label :vintage, "Vintage" %>
+  <%= f.check_box :vintage %><br>
+  <br>
+  <br>
+</p>
+
