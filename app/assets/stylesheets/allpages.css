@@ -45,9 +45,9 @@ body {
 
 /* rating stars-------------------- */
 
-.rating {
+/*.rating {*/
   /*overflow: hidden;*/
-  display: inline-block;
+/*  display: inline-block;
 }
 
 
@@ -64,6 +64,38 @@ body {
   width: 33px;
   height: 33px;
   background: url('star-empty.png');
+}
+
+div[title]:hover:after {
+  content: attr(title);
+  padding: 4px 8px;
+  color: #333;
+  position: absolute;
+  left: 0;
+}
+*/
+
+/* rating stars-------------------- */
+
+.rating {
+  /*overflow: hidden;*/
+  display: inline-block;
+}
+
+
+.rating-star {
+  display: inline-block;
+  float: left;
+  width: 33px;
+  height: 33px;
+  background: url('../star-empty.png');
+}
+.new-rating-stars {
+  display: inline-block;
+  float: left;
+  width: 33px;
+  height: 33px;
+  background: url('../star-empty.png');
 }
 
 

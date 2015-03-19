@@ -33,11 +33,26 @@ function newRatingStarsHover(){
 }
 
 // POPULATES A HIDDEN VALUE IN FORM THAT WILL LATER UPDATE AR IN POST ROUTE.
+// function newRatingStarsClick(){
+//   $('.new-rating-stars').on('click', function(event){
+//     console.log('clicked on a star')
+//     $(".new-rating-stars").off("mouseenter")
+//     $(".new-rating-stars").off("mouseleave")
+
+//     var starNumber = event.currentTarget.id.substring(4)
+//     var thisOutfitsRatingForm = $(this).parent()[0]
+//     var outfitIndex = thisOutfitsRatingForm.id.substring(10)
+//     $("#newrating-" + outfitIndex + " div:lt("+ starNumber +")").css('background', "url('../star-full.png')")
+//     $("#form-" + outfitIndex)[0][0].value = starNumber
+//   })
+// }
 function newRatingStarsClick(){
   $('.new-rating-stars').on('click', function(event){
     console.log('clicked on a star')
-    $(".new-rating-stars").off("mouseenter")
-    $(".new-rating-stars").off("mouseleave")
+    var parentId = event.currentTarget.parentElement.id
+    $("#"+parentId+" .new-rating-stars").off("mouseenter")
+    $("#"+parentId+" .new-rating-stars").off("mouseleave")
+    $("#"+parentId+" .new-rating-stars").css('background', "url('../star-empty.png')")
 
     var starNumber = event.currentTarget.id.substring(4)
     var thisOutfitsRatingForm = $(this).parent()[0]
@@ -312,6 +327,16 @@ function renderFeed(data){
 
 
 
+function remove_fields(link) {
+  $(link).prev("input[type=hidden]").val("1");
+  $(link).closest(".fields").hide();
+}
+
+function add_fields(link, association, content) {
+  var new_id = new Date().getTime();
+  var regexp = new RegExp("new_" + association, "g")
+  $(link).parent().before(content.replace(regexp, new_id));
+}
 
 
 
