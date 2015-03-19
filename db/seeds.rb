@@ -25,70 +25,71 @@ ArticleType.create(type_desc: "Scarf")
 ArticleType.create(type_desc: "Skirt")
 ArticleType.create(type_desc: "Earrings")
 ArticleType.create(type_desc: "Vest")
-puts "*" * 100
-puts "Article Types Created"
-puts 
-puts
+ArticleType.create(type_desc: "Hat")
+# puts "*" * 100
+# puts "Article Types Created"
+# puts
+# puts
 
 
-puts "*" * 100
-puts "making default user, login with user@user.com, pwd is user"
-User.create(username: 'user', email: 'user@user.com', password: 'user')
-puts "making seed users"
-20.times do
-  puts "making a user"
-  user = User.create(username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: Faker::Internet::password(8))
-  puts "#{user.username} created"
-  puts "*" * 100
-end
+# puts "*" * 100
+# puts "making default user, login with user@user.com, pwd is user"
+# User.create(username: 'user', email: 'user@user.com', password: 'user')
+# puts "making seed users"
+# 20.times do
+#   puts "making a user"
+#   user = User.create(username: Faker::Internet.user_name, email: Faker::Internet.free_email, password: Faker::Internet::password(8))
+#   puts "#{user.username} created"
+#   puts "*" * 100
+# end
 
-require 'csv'
-puts "*" * 100
-puts "*" * 100
-puts
-puts
-puts "importing outfits csv"
-puts
-CSV.foreach('db/import_outfits.csv', :headers => true) do |row|
-	Outfit.create(image_url: row['image_url'], user_id: row['user_id'], title: row['title'], caption: row['caption'], gender: row['gender'] )
-	# p row['id']
+# require 'csv'
+# puts "*" * 100
+# puts "*" * 100
+# puts
+# puts
+# puts "importing outfits csv"
+# puts
+# CSV.foreach('db/import_outfits.csv', :headers => true) do |row|
+# 	Outfit.create(image_url: row['image_url'], user_id: row['user_id'], title: row['title'], caption: row['caption'], gender: row['gender'] )
+# 	# p row['id']
 
-end
-puts
+# end
+# puts
 
-puts "*" * 100
-puts 'finished importing csv'
-puts "*" * 100
-puts "*" * 100
-puts
-puts "users are rating the outfits"
-puts
+# puts "*" * 100
+# puts 'finished importing csv'
+# puts "*" * 100
+# puts "*" * 100
+# puts
+# puts "users are rating the outfits"
+# puts
 
-def generate_comment
-	pronouns =['your', 'that']
-	nouns = ['look', 'style', 'outfit', 'getup']
-	adjective = ['fabulous', 'great', 'horrible', 'fantastic', 'wretched', 'glamorous']
-	"#{pronouns.sample} #{nouns.sample} is #{adjective.sample}"
-end
+# def generate_comment
+# 	pronouns =['your', 'that']
+# 	nouns = ['look', 'style', 'outfit', 'getup']
+# 	adjective = ['fabulous', 'great', 'horrible', 'fantastic', 'wretched', 'glamorous']
+# 	"#{pronouns.sample} #{nouns.sample} is #{adjective.sample}"
+# end
 
-def make_comment?
-	random_boolean = [true, false].sample
-end
+# def make_comment?
+# 	random_boolean = [true, false].sample
+# end
 
 
-users = User.all
-users.each do |user|
-	puts "#{user.username} is rating 10 outfits"
-	not_users_outfits = Outfit.where.not(user_id: user.id)
-	outfits = not_users_outfits.sample(10)
-	outfits.each do |outfit|
-		stars = rand(1..5)
-		if make_comment?
-			comment = generate_comment
-			outfit.ratings.create(user: user, stars: stars, comment: comment)
-		else
-			outfit.ratings.create(user: user, stars: stars)
-		end
-	end
-	puts "*" * 100
-end
+# users = User.all
+# users.each do |user|
+# 	puts "#{user.username} is rating 10 outfits"
+# 	not_users_outfits = Outfit.where.not(user_id: user.id)
+# 	outfits = not_users_outfits.sample(10)
+# 	outfits.each do |outfit|
+# 		stars = rand(1..5)
+# 		if make_comment?
+# 			comment = generate_comment
+# 			outfit.ratings.create(user: user, stars: stars, comment: comment)
+# 		else
+# 			outfit.ratings.create(user: user, stars: stars)
+# 		end
+# 	end
+# 	puts "*" * 100
+# end
