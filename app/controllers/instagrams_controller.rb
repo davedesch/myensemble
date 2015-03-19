@@ -1,7 +1,7 @@
 class InstagramsController < ApplicationController
 
 
-  CALLBACK_URL = "http://localhost:3000/instagram/oauth/callback"
+  CALLBACK_URL = "https://floating-retreat-7259/instagram/oauth/callback"
 
   CLIENT = ENV['CLIENT_ID']
 
