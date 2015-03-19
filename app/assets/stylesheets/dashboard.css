@@ -1,0 +1,143 @@
+xbody {
+  background-image: url("norwegian_rose.png");
+}
+
+#title {
+/*	margin-left: 30%;
+	margin-top: 30%;
+	font-family: 'Lobster', cursive;
+	font-size: 75pt;*/
+	color: black;
+}
+
+#sign_in {
+	/*margin-left: 50%;*/
+}
+
+.container {
+	width: 100%;
+}
+
+#searchbar {
+	text-align: center;
+	/*margin: auto;*/
+	/*border: solid;*/
+}
+
+.dashboard {
+	text-align: center;
+	/*border: dashed;*/
+
+}
+
+#outfitpicture {
+	margin: auto;
+}
+
+
+/*title tag for pop-up-messages-------*/
+
+div[title]:hover:after {
+  content: attr(title);
+
+
+  color: #333;
+  position: absolute;
+  left: 0;
+  margin-left: 30px;
+
+}
+
+#logoheader {
+  height: 120px;
+  float: right;
+  margin-top: -35px;
+}
+/* rating stars-------------------- */
+
+.rating {
+  /*overflow: hidden;*/
+  display: inline-block;
+}
+
+
+.rating-star {
+  display: inline-block;
+  float: left;
+  width: 33px;
+  height: 33px;
+  background: url('../star-empty.png');
+}
+.new-rating-stars {
+  display: inline-block;
+  float: left;
+  width: 33px;
+  height: 33px;
+  background: url('../star-empty.png');
+}
+
+
+/*.new-rating-stars:hover ~ .new-rating-stars,
+
+.new-rating-stars:hover{
+  background: url('../star-full.png');
+}
+*/
+
+.rating-form {
+  display: none;
+}
+/*
+.newbuttons {
+  padding: 5px;
+  color: white;
+}
+
+.outfitform {
+  margin-top: 1px;
+}*/
+
+
+#hanger{
+  display: none;
+}
+
+nav {
+
+}
+
+.individual-outfit {
+  /*border: solid #56D6F9;*/
+  margin-bottom:  20px;
+  padding-top: 20px;
+  margin-top: 10px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+
+          background-image: url(white_wall.png);
+
+
+}
+
+.trendinghash {
+      -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+
+          background-image: url(white_wall.png);
+}
+
+.recentoutfitsbox {
+
+        -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+
+          background-image: url(white_wall.png);
+
+}
+
+.thebox {
+  padding: 20px;
+}
