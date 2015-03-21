@@ -2,7 +2,7 @@ class InstagramsController < ApplicationController
 
 
   CALLBACK_URL = "https://floating-retreat-7259.herokuapp.com/instagram/oauth/callback"
-  
+
 
   CLIENT = ENV['CLIENT_ID']
 
@@ -15,7 +15,9 @@ class InstagramsController < ApplicationController
   def authorized
     response = Instagram.get_access_token(params[:code], :redirect_uri => CALLBACK_URL)
     user = create_or_login(response)
+    p user
     session[:user_id] = user.id
+
     redirect_to user_path(user.id)
   end
 
