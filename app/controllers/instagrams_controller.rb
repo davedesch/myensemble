@@ -15,9 +15,7 @@ class InstagramsController < ApplicationController
   def authorized
     response = Instagram.get_access_token(params[:code], :redirect_uri => CALLBACK_URL)
     user = create_or_login(response)
-    p user
     session[:user_id] = user.id
-
     redirect_to user_path(user.id)
   end
 
@@ -37,7 +35,7 @@ class InstagramsController < ApplicationController
 private
 
   def create_or_login(response)
-   user = User.where(username: response.user.username).first_or_create do |newuser|
+   user = User.find_or_create_by(username: response.user.username) do |newuser|
         newuser.username = response.user.username
         newuser.password = response.access_token
         # newuser.password_digest = response.access_token
