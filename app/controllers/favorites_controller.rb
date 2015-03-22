@@ -13,14 +13,18 @@ class FavoritesController < ApplicationController
     # all outfits from the users favorite outfits
     user = User.find(session[:user_id])
     outfits = user.favorites.where(fave_type: "Outfits")
-    results = []
-    outfits.each do |outfit|
-      types = []
-      outfit.articles each do |article|
-        types.push(article.article_type.type_desc)
-      end
-      results.push({outfit_id: outfit.id , title: outfit.title , image: outfit.image_url, types: types, avg_rating: outfit.average_ratings, caption: outfit.caption, user: outfit.user.username, popularity: outfit.popularity, created_at: outfit.created_at})
-    end
+    results = get_outfit_details(outfits)
+    # outfits.each do |outfit|
+    #   types = []
+    #   outfit.articles each do |article|
+    #     types.push(article.article_type.type_desc)
+    #   end
+    #   ratings = []
+    #   outfit.ratings.each do |rating|
+    #     ratings.push({comment: rating.comment, stars: rating.stars, username: rating.user.username})
+    #   end
+    #   results.push({outfit_id: outfit.id , title: outfit.title , image: outfit.image_url, types: types, avg_rating: outfit.average_ratings, caption: outfit.caption, user: outfit.user.username, popularity: outfit.popularity, created_at: outfit.created_at, ratings: ratings})
+    # end
     render json: results
 
   end
@@ -39,7 +43,11 @@ class FavoritesController < ApplicationController
       outfit.articles each do |article|
         types.push(article.article_type.type_desc)
       end
-      results.push({outfit_id: outfit.id , title: outfit.title , image: outfit.image_url, types: types, avg_rating: outfit.average_ratings, caption: outfit.caption, user: outfit.user.username, popularity: outfit.popularity, created_at: outfit.created_at})
+      ratings = []
+      outfit.ratings.each do |rating|
+        ratings.push({comment: rating.comment, stars: rating.stars, username: rating.user.username})
+      end
+      results.push({outfit_id: outfit.id , title: outfit.title , image: outfit.image_url, types: types, avg_rating: outfit.average_ratings, caption: outfit.caption, user: outfit.user.username, popularity: outfit.popularity, created_at: outfit.created_at, ratings: ratings})
     end
     render json: results
   end

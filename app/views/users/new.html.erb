@@ -3,19 +3,6 @@
 <div class="col-md-4 col-md-offset-4 registerbox" id="signup">
   <img src=<%= asset_path('ENSEMBLE-logo-white.png') %> id="logo">
   <h1 id="registerheader">Sign up now and start rating</h1>
-<!--     <form action="/users" method="post"  id="register">
-      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden"/>
-      Username:<br>
-      <input type="text" name="user[username]" placeholder="">
-      <br>
-      Email:<br>
-      <input type="text" name="user[email]" placeholder="">
-      <br>
-      Password:<br>
-      <input type="password" name="user[password]" placeholder="">
-      <br><br>
-      <div class="instagramnew">
-        <button type="submit" value="Submit"class="btn btn-1 btn-1a newbuttons">SUBMIT</button></form> -->
 
         <%= form_for :user, url: '/users', id: "register", class: "registerform" do |f| %>
         <table>

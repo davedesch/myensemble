@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-
   def new
   end
 
@@ -13,7 +12,6 @@ class SessionsController < ApplicationController
       redirect_to user_path(user.id)
     else
     # If user's login doesn't work, send them back to the login form.
-
       redirect_to '/login', :notice => "Invalid login. Try again"
     end
   end
