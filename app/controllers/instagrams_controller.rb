@@ -36,8 +36,6 @@ private
 
   def create_or_login(response)
    user = User.find_or_create_by(username: response.user.username) do |newuser|
-        puts "*" * 100
-        puts "i didn't find the user, so I'm making one"
         newuser.username = response.user.username
         newuser.password = response.access_token
         # newuser.password_digest = response.access_token
@@ -47,8 +45,6 @@ private
       end
       user.auth_token = response.access_token
       user.save
-      puts "*" * 100
-      puts user
     return user
   end
 
