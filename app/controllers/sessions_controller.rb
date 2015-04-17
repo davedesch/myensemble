@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+    puts 'this is the session controller create'
     user = User.find_by_email(params[:email])
     # If the user exists AND the password entered is correct.
     if user && user.authenticate(params[:password])
