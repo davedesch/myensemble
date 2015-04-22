@@ -20,15 +20,15 @@ function newRatingStarsHover(){
   $("form .new-rating-stars").mouseenter(function(event){
     var hoveredStarId = event.currentTarget.id
     var parentId = event.currentTarget.parentElement.id
-    $("#"+ parentId + " #"+ hoveredStarId +"").css('background', "url('../star-full.png')");
-    $("#"+parentId + " #"+ hoveredStarId +"").prevAll().css('background', "url('../star-full.png')");
+    $("#"+ parentId + " #"+ hoveredStarId +"").css('background', "url('star-full.png')");
+    $("#"+parentId + " #"+ hoveredStarId +"").prevAll().css('background', "url('star-full.png')");
   });
 
   $("form .new-rating-stars").mouseleave(function(event){
     var hoveredStarId = event.currentTarget.id
     var parentId = event.currentTarget.parentElement.id
-    $("#"+parentId + " #"+ hoveredStarId +"").css('background', "url('../star-empty.png')");
-    $("#"+parentId + " #"+ hoveredStarId +"").prevAll().css('background', "url('../star-empty.png')");
+    $("#"+parentId + " #"+ hoveredStarId +"").css('background', "url('star-empty.png')");
+    $("#"+parentId + " #"+ hoveredStarId +"").prevAll().css('background', "url('star-empty.png')");
   });
 }
 
@@ -39,12 +39,12 @@ function newRatingStarsClick(){
     var parentId = event.currentTarget.parentElement.id
     $("#"+parentId+" .new-rating-stars").off("mouseenter")
     $("#"+parentId+" .new-rating-stars").off("mouseleave")
-    $("#"+parentId+" .new-rating-stars").css('background', "url('../star-empty.png')")
+    $("#"+parentId+" .new-rating-stars").css('background', "url('star-empty.png')")
 
     var starNumber = event.currentTarget.id.substring(4)
     var thisOutfitsRatingForm = $(this).parent()[0]
     var outfitIndex = thisOutfitsRatingForm.id.substring(10)
-    $("#newrating-" + outfitIndex + " div:lt("+ starNumber +")").css('background', "url('../star-full.png')")
+    $("#newrating-" + outfitIndex + " div:lt("+ starNumber +")").css('background', "url('star-full.png')")
     $("#form-" + outfitIndex)[0][0].value = starNumber
   })
 }
@@ -107,7 +107,7 @@ function addAverageRating(data) {
  for (var i = 0; i < data.length ; i++ ) {
   var rating = data[i].avg_rating
   if (rating > 0) {
-    $("#rating-" + i + " div:lt("+ rating +")").css('background', "url('../star-full.png')")
+    $("#rating-" + i + " div:lt("+ rating +")").css('background', "url('star-full.png')")
   }
 }
 }
