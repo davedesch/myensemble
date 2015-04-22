@@ -59,4 +59,7 @@ group :development, :test do
     gem 'selenium-webdriver'
     gem 'nyan-cat-formatter'
   end
+
+  gem 'rails_12factor', group: :production
+
 end
