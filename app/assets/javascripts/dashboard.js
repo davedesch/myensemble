@@ -18,6 +18,7 @@ $(document).on('page:load', ready)
 function newRatingStarsHover(){
 
   $("form .new-rating-stars").mouseenter(function(event){
+    console.log("in the hovering function")
     var hoveredStarId = event.currentTarget.id
     var parentId = event.currentTarget.parentElement.id
     $("#"+ parentId + " #"+ hoveredStarId +"").css('background', "url('star-full.png')");
