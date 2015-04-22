@@ -3,7 +3,7 @@
 <div class="col-md-4 col-md-offset-4" id="signup">
     <img src=<%= asset_path('ENSEMBLE-logo-white.png') %> id="logoindex">
     <div class="instagram">
-        <a href="/instagram/oauth/connect"><button class="btn btn-1 btn-1a">Login With Instagram <i class="fa fa-instagram"></i></button></a>
+        <a href="/instagram/oauth/connect"><button class="btn btn-1 btn-1a"> With Instagram <i class="fa fa-instagram"></i></button></a>
         <h1>Let's get you signed in</h1>
         <%= form_tag '/login', id: "register" do %>
         <% flash.each do |name, msg| %>
@@ -21,5 +21,5 @@
             <%= submit_tag "Sign In", class: "btn btn-1 btn-1a newbuttons", id: "signinbutton" %>
             <% end %>
         </div>
-        <div class="registernow">Not a Member Yet?<a href="/users/new">Register</a></div>
+        <div class="registernow">Not a Member Yet?<a href="/users/new">fa</a></div>
     </div>
