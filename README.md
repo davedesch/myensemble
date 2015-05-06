@@ -1,9 +1,7 @@
 ## Ensemble
 
-[This link](http://example.net/)
-
 #### TEAM: 
-Dave Descheneaux, Saleh Rastani, Peter Fitzpatrick, Jessie Rushing
+[Dave Descheneaux](https://github.com/davedesch), [Saleh Rastani](https://github.com/salehrastani), [Peter Fitzpatrick](https://github.com/p3t3rfp), [Jessie Rushing](https://github.com/immber)
 
 #### Summary:
 Ensemble is a fashion app that allows users to get feedback on what they are wearing while allowing them to see what others wore to the same kinds of events.
